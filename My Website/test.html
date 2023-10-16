@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .box {
+            width: 290px;
+            height: 270px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid red;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: transform 0.5s ease-in-out;
+            transform: translateX(-30vw)
+        }
+        .box1 {
+            width: 290px;
+            height: 270px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid red;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: transform 0.5s ease-in-out;
+            transform: translateX(-52vw)
+        }
+        .box2 {
+            width: 290px;
+            height: 270px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid red;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: transform 0.5s ease-in-out;
+            transform: translateX(-73vw)
+        }
+
+        .expanded {
+            transform: translateX(40vw);
+        }
+        .expanded1 {
+            transform: translateX(-3.5vw);
+        }
+        .expanded2 {
+            transform: translateX(-47vw);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"; id="box"></div>
+    <div class="box1" id="box1"></div>
+    <div class="box2" id="box2"></div>
+
+    <script>
+        const box = document.getElementById("box");
+        const box1 = document.getElementById("box1");
+        const box2 = document.getElementById("box2");
+
+        box.addEventListener("click", () => {
+            box.classList.toggle("expanded");
+        });
+
+        box.addEventListener("click", () => {
+            box1.classList.toggle("expanded1");
+        });
+
+        box.addEventListener("click", () => {
+            box2.classList.toggle("expanded2");
+        });
+
+    </script>
+</body>
+</html>

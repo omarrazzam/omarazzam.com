@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color on Hover</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("last.jpg");
+            background-size: cover;
+        }
+
+        .box1 {
+         width: 400px;
+         height: 400px;
+         background-image: url("me.png");
+         background-size: cover;
+
+         transform: translateX(600px) translateY(150px);
+         border-radius: 50%; /* Make the box a circle */
+
+         z-index: 0;
+     }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <img src="me.png" alt="Image">
+        </div>
+    </div>
+</body>
+</html>

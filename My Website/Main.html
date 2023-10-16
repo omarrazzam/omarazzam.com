@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmarAzzam</title>
+    <link rel="icon" href="33.ico" style="size: 9px;" type="image/x-icon">
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+
+    <style>
+    @font-face {
+      font-family: 'Stretchh Pro';
+      src: url('fonts/stretchpro-webfont.woff2') format('woff2'),
+           url('fonts/stretchpro-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+
+
+        body {
+            overflow-x: hidden;
+
+        }
+
+        h5 {
+    font-size: 1.15rem;
+    margin-bottom: 0.25rem;
+}
+h6{
+  font-size: 0.9rem;
+  color: #d8d8d8;
+  padding: 0 0 0 2px;
+
+
+}
+        /* Customize scrollbar styles for dark mode */
+         body::-webkit-scrollbar {
+             width: 10px;
+         }
+
+         body::-webkit-scrollbar-track {
+             background-color: #333; /* Track color */
+         }
+
+         body::-webkit-scrollbar-thumb {
+             background-color: #555; /* Thumb color */
+         }
+
+         body::-webkit-scrollbar-thumb:hover {
+             background-color: #777; /* Thumb color on hover */
+         }
+
+
+
+        .first {
+          background-image: url("bg.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 864px;
+        }
+
+        .second {
+          background-image: url("bg2.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 864px;
+          position: relative;
+        }
+
+        .third {
+          background-image: url("dark.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 864px;
+          position: relative;
+        }
+
+        .fourth {
+          background-image: url("city.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 864px;
+          position: relative;
+        }
+
+        .fifth {
+          background-image: url("last.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 864px;
+          position: relative;
+          display: flex;
+        }
+
+        .overlay, .overlay1, .overlay2 {
+          position: absolute;
+          transition: background-color 0.5s ease-in-out;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: var(--overlay-color, rgba(0, 0, 0, 0)); /* Use CSS variable */
+          z-index: 0; /* Make sure the overlay is above the background image */
+        }
+
+        .overlay1 {
+          background-color: var(--overlay1-color, rgba(0, 0, 0, 0)); /* Use CSS variable */
+        }
+        .overlay2 {
+          background-color: var(--overlay2-color, rgba(0, 0, 0, 0)); /* Use CSS variable */
+        }
+
+        .navbar {
+        padding: 0px 0px 0px 17px; /* Increase vertical padding to increase the navbar size */
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      color: white;
+  }
+
+
+
+    .omar{
+      font-family: poppins light;
+      font-size: 22px;
+      font-style: normal;
+    }
+
+    .azzam{
+      font-family: poppins medium;
+      font-size: 22px;
+      font-style: normal;
+    }
+
+      .a33 {
+        margin: 0 10px 0 0;
+      }
+
+        .navbar-brand:hover{
+          color:#d8d8d8;
+        }
+
+
+        .nav-link {
+        color: white;
+        margin-right: 25px; /* Increase margin to increase space between buttons */
+        font-family: SF Pro Display light;
+        font-size: 19px;
+    }
+
+        .nav-link:hover{
+          color:#d8d8d8;
+        }
+
+        .jobT {
+
+          transform: translateX(-6px);
+          font-size: 22px;
+          font-family: SF Pro Display light;
+          padding-bottom: 10px;
+          color: white;
+        }
+
+        .section {
+
+          transform: translateX(90px);
+          font-size: 22px;
+          font-family: SF Pro Display light;
+
+          color: white;
+        }
+
+        .welcome {
+          transform-origin: top left;
+          transform: scale(1.2, 1.5) translateX(-10px);
+          font-family: Stretch Pro;
+          padding-bottom: 35px;
+          color: white;
+          position:relative;
+
+        }
+
+        .title {
+          transform-origin: top left;
+          transform: scale(1.2, 1.5) translateX(73px);
+          font-family: Stretch Pro;
+          padding-bottom: 35px;
+          color: white;
+          position:relative;
+
+        }
+
+        .section1 {
+
+
+          font-size: 22px;
+          font-family: SF Pro Display light;
+          padding-bottom: 20px;
+          color: white;
+        }
+
+        .welcome1left {
+          flex: 1;
+          transform: scale(1.2, 1.5);
+          font-family: Stretchh Pro;
+          padding-bottom: 15px;
+          color: white;
+
+        }
+
+
+
+
+        .heading {
+            position: absolute;
+            top: 50%; /* Center vertically relative to the parent (.fifth) */
+            left: 50%; /* Center horizontally relative to the parent (.fifth) */
+            transform: translate(-50%, -350px); /* Center the .heading div itself */
+            text-align: center; /* Center the text inside the .heading div */
+            width: 50%;
+
+            padding: 20px; /* Add padding for spacing */
+
+
+        }
+        .container{
+          display: flex;
+        }
+
+        .responsivediv {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row; /* Make the children align in a row */
+    align-items: center; /* Center the children vertically */
+  }
+
+        /* Style for the left overlay div */
+        .left-overlay, .right-overlay {
+   position: relative;
+   z-index: 3;
+   text-align: center;
+   font-family: 'poppins', sans-serif;
+   font-size: 20px;
+   color: white;
+   flex: 1;
+   display: flex;
+   transition: opacity 0.3s ease; /* Smooth transition for opacity */
+   width: 50%;
+   height: 400px;
+   overflow: hidden; /* Hide overflow content */
+ }
+ .left-overlay::before,
+  .right-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("blur.png");
+    background-position: center;
+    background-size: cover;
+    opacity: 50%;
+    z-index: 6;
+    transition: opacity 0.3s ease;
+  }
+
+/* .jobTitles{
+  text-align: center;
+  font-family: Century Gothic Regular;
+  font-size: 35px;
+  padding-left: 340px;
+  z-index: 2;
+  position: absolute;
+}
+.jobTitles1{
+  text-align: center;
+  font-family: Century Gothic Regular;
+  font-size: 35px;
+  padding-left: 182px;
+  z-index: 1;
+  position: absolute;
+} */
+
+.jobTitles, .jobTitles1 {
+  font-family: Century Gothic Regular;
+   position: absolute; /* Change position to absolute */
+   top: 0; /* You can adjust top, left, or other properties to position it as needed */
+   left: 0;
+   width: 100%; /* Assuming you want it to cover the entire left-overlay or right-overlay */
+   height: 100%;
+   z-index: 5;
+ }
+
+.jobTitlesHeading{
+  font-size: 32px;
+}
+.jobTitlesHeading1{
+  font-size: 32px;
+}
+
+
+
+
+
+        /* Style for the content divs */
+        .content-div {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            position: relative; /* Position relative to allow z-index to work */
+            z-index: 1; /* Ensure the content is above the overlay */
+        }
+
+        /* Hover styles to make the overlay divs disappear */
+
+
+
+        .right-overlay:hover::before {
+    opacity: 0;
+  }
+
+  .left-overlay:hover::before {
+opacity: 0;
+}
+
+        .left-overlay:hover + .scarface {
+
+          background-image: url("me2-01.png");
+
+        }
+
+
+        .scarface {
+          width: 500px;
+          height: 500px;
+          background-image: url("me.png");
+          background-size: cover;
+          position: absolute;
+          flex: 1;
+          display: flex;
+          border-radius: 50%; /* Make the box a circle */
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -60%);
+          z-index: 5;
+          }
+
+          .flex-container {
+                display: inline;
+                align-items: center;
+                justify-content: center;
+                height: 55px;
+                width: 100%;
+                flex:1;
+                bottom: 60px;
+                position: absolute;
+              }
+
+  .contactbar {
+      flex: 1;
+      display: flex !important;
+      justify-content: center !important; /* Center horizontally */
+      align-items: center !important; /* Center vertically */
+      height: 50px !important;
+      width: 280px;
+      margin: auto;
+
+}
+
+
+        p {
+          font-family: poppins;
+          font-style: italic;
+          color: white;
+
+          width: 475px;
+          padding-bottom: 15px;
+        }
+
+        .contact-button {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 18px; /* Adjust to control button roundness */
+            padding: 5px 17px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: background-color 0.5s, color 0.5s;
+
+        }
+
+        .contact-button:hover {
+            background-color: white;
+            color: black;
+
+        }
+
+        .image-button {
+          flex: 1;
+          display: inline-block; /* Display items next to each other */
+          margin-right: 30px; /* Add space between items */
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            transition: transform 0.2s;
+            width: 27px;
+            size: 30px;
+            align-items: center;
+
+        }
+
+        .image-button1 {
+      flex: 1;
+      display: inline-block; /* Display items next to each other */
+      margin-right: 20px; /* Add space between items */
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.2s;
+      width: 32px;
+      size: 30px;
+      align-items: center;
+  }
+
+  .image-button1:hover {
+      transform: translateY(-10px);
+  }
+
+  a {
+      position: relative;
+  }
+
+  .phone-number {
+      position: absolute;
+      opacity: 0;
+      background-color: #2a2a2a;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 10px;
+      top: -40px; /* Position it above the link */
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      pointer-events: none; /* Allows clicks to pass through the callout */
+      font-size: 14px;
+      text-align: center;
+  }
+
+  .image-button1:hover .phone-number {
+      opacity: 1;
+  }
+
+
+
+
+        .image-button:hover {
+            transform: translateX(-50%) translateY(-10px);
+        }
+
+
+
+
+
+
+
+
+
+
+        .rocket {
+            width: 144px;
+
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 1.5s ease-in-out;
+            transform: translateX(4vw) translateY(-1.3vw);
+
+
+        }
+
+        .plane {
+            width: 90px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 1.5s ease-in-out;
+            transform: translateX(4vw);
+        }
+
+        .bird {
+            width: 95px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 1.5s ease-in-out;
+            transform: translateX(5vw) translateY(28px);
+        }
+
+
+        .expanded {
+            transform: translateX(80vw);
+
+        }
+        .expandedR {
+            transform: translateX(80vw) translateY(-1vw);
+
+        }
+
+        .original {
+            transform: rotate(180deg) translateX(-13vw);
+        }
+
+        .originalB {
+            transform: translateX(14vw) translateY(2vw) scaleX(-1);
+        }
+        .originalR {
+            transform: rotate(180deg) translateX(-13vw) translateY(3.7vw);
+        }
+
+
+
+        .rotateback {
+            transform: rotate(180deg) scaleX(-1) translateX(4vw);
+        }
+
+
+        .expandedB {
+            transform: translateX(80vw) translateY(3vw);
+
+        }
+        .rotatedR {
+            transform: rotate(180deg) translateX(-85vw) translateY(3.5vw);
+
+        }
+
+.rotated {
+    transform: rotate(180deg) translateX(-85vw);
+
+}
+
+.rotatedB {
+    transform: scaleX(-1) translateY(3vw) translateX(-85vw);
+
+
+
+}
+
+
+        .box {
+            width: 290px;
+            height: 270px;
+            background-color: transparent;
+            color: white;
+
+            border-radius: 60px;
+            cursor: pointer;
+            transition: transform 1.5s ease-in-out;
+            transform: translateX(-63%) translateY(-91%);
+            overflow: hidden;
+            position: relative;
+        }
+        .box1 {
+            width: 290px;
+            height: 270px;
+            background-color: transparent;
+            color: white;
+
+            border-radius: 60px;
+            cursor: pointer;
+            transition: transform 1.5s ease-in-out;
+            transform: translateX(-74%) translateY(-191%);
+            overflow: hidden;
+            position: relative;
+        }
+        .box2 {
+            width: 290px;
+            height: 270px;
+            background-color: transparent;
+            color: white;
+
+            border-radius: 60px;
+            cursor: pointer;
+            transition: transform 1.5s ease-in-out;
+            transform: translateX(-85%) translateY(-292%);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .box3 {
+            width: 290px;
+            height: 270px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: transform 1.5s ease-in-out;
+            transform: translateX(-63%) translateY(-66%);
+            overflow: hidden;
+            position: relative;
+
+        }
+        .box4 {
+            width: 290px;
+            height: 270px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: transform 1.5s ease-in-out;
+            transform: translateX(-74%) translateY(-166%);
+            overflow: hidden;
+            position: relative;
+        }
+        .box5 {
+            width: 290px;
+            height: 270px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: transform 1.5s ease-in-out;
+            transform: translateX(-85%) translateY(-267%);
+            overflow: hidden;
+            position: relative;
+        }
+        .box6 {
+            width: 290px;
+            height: 270px;
+            background-color: transparent;
+            color: white;
+
+            border-radius: 60px;
+            cursor: pointer;
+            transition: transform 1.5s ease-in-out;
+            transform: translateX(-64%) translateY(-40%);
+            overflow: hidden;
+            position: relative;
+        }
+        .box7 {
+            width: 290px;
+            height: 270px;
+            background-color: transparent;
+            color: white;
+
+            border-radius: 60px;
+            cursor: pointer;
+            transition: transform 1.5s ease-in-out;
+            transform: translateX(-74%) translateY(-140%);
+            overflow: hidden;
+            position: relative;
+        }
+        .box8 {
+            width: 290px;
+            height: 270px;
+            background-color: transparent;
+            color: white;
+
+            border-radius: 60px;
+            cursor: pointer;
+            transition: transform 1.5s ease-in-out;
+            transform: translateX(-84%) translateY(-240%);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .pagination {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-count {
+            font-size: 15px;
+            margin: 10px 0;
+            color: white;
+            font-family: poppins;
+        }
+
+        .btn {
+
+
+            color: white;
+            outline: none;
+            padding: 0;
+        }
+
+        .btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}
+
+
+
+        .btn:hover {
+            color: #d8d8d8;
+        }
+
+
+        .expanded0 {
+            transform: translateX(50.5vw) translateY(-90%) !important;
+        }
+        .expanded1 {
+            transform: translateX(28vw) translateY(-189.5%) !important;
+        }
+        .expanded2 {
+            transform: translateX(5.8vw) translateY(-289.5%) !important;
+        }
+        .expanded3 {
+            transform: translateX(50vw) translateY(-62.5%) !important;
+        }
+        .expanded4 {
+            transform: translateX(28vw) translateY(-162.5%) !important;
+        }
+        .expanded5 {
+            transform: translateX(5.8vw) translateY(-262.5%) !important;
+        }
+        .expanded6 {
+            transform: translateX(50vw) translateY(-40%) !important;
+        }
+        .expanded7 {
+            transform: translateX(28vw) translateY(-140%) !important;
+        }
+        .expanded8 {
+            transform: translateX(5.8vw) translateY(-240%) !important;
+        }
+
+        /* Style the frame within .box */
+        .frame {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        #frame1 {
+          background: url('vena.png');
+          background-size: cover;
+        }
+
+        #frame2 {
+          background: url('laFamille.png');
+          background-size: cover;
+        }
+
+        /* Style the image to fill the frame */
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Style the overlay */
+        .slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0; /* Start with a height of 0 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%); /* Change the gradient direction */
+    color: white;
+    padding: 10px 10px 10px 20px; /* Adjust the left padding to move the text to the right */
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.3s ease, height 0.3s ease; /* Animate height */
+    font-family: poppins;
+    /* Add a slight drop shadow */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+        /* Show the overlay on hover */
+        .box:hover .slider,
+        .box1:hover .slider,
+        .box2:hover .slider,
+        .box3:hover .slider,
+        .box4:hover .slider,
+        .box5:hover .slider,
+        .box6:hover .slider,
+        .box7:hover .slider,
+        .box8:hover .slider {
+              opacity: 1;
+              height: 28%; /* Expand the height to 50% on hover */
+        }
+
+      .navbar-toggler{
+        margin-right: 10px;
+      }
+          .navbar-toggler-icon{
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      .responsive-container {
+  width: 300px; /* Use the full width of the parent container */
+  max-width: 800px; /* Limit the maximum width to ensure readability */
+  margin: 0 90px;
+  padding: 10px;
+  text-align: left; /* Center the content */
+  box-sizing: border-box; /* Include padding and border in the total width/height */
+
+  /* Adjust spacing and font sizes for different screen sizes */
+  margin-top: 5vh; /* Adjust as needed */
+  padding-top: 20px; /* Adjust as needed */
+  transform: translateX(0%); /* Reset the transform or adjust as needed */
+}
+
+/* Adjust font sizes for different screen sizes using media queries */
+
+@media (max-width: 1100px) {
+  .jobTitlesHeading{
+    transform: translateX(20px);
+
+  }
+  .jobTitlesHeading1{
+    transform: translateX(-68px);
+  }
+  .jobTitles{
+    transform: translateX(-110px);
+
+  }
+  .jobTitles1{
+    transform: translateX(110px);
+
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .jobTitlesHeading{
+    transform: translateX(20px);
+    font-size: 27px;
+
+  }
+  .jobTitlesHeading1{
+    transform: translateX(-68px);
+    font-size: 27px;
+  }
+  .jobTitles{
+    transform: translateX(-100px);
+
+  }
+  .jobTitles1{
+    transform: translateX(100px);
+
+  }
+}
+
+
+
+
+
+@media (max-width: 650px) {
+  .responsive-container {
+      margin: 1% 12%;
+  }
+
+  p {
+    width: 350px;
+  }
+
+  h1{
+    font-size: 2rem;
+  }
+  .title{
+    font-size: 1.8rem !important;
+    margin-left: -50px;
+  }
+  .section{
+    margin-left: -50px;
+  }
+}
+@media (max-width: 470px) {
+  .responsive-container {
+      margin: 5% 9%;
+  }
+  /* .rocket{
+    width: 122px;
+    transform: translateX(6vw) translateY(-5vw);
+  } */
+  .box{
+    transform: translateX(-85%) translateY(-91%);
+  }
+  .box1{
+    transform: translateX(-88%) translateY(-191%)
+  }
+  .box2{
+    transform: translateX(-91%) translateY(-292%)
+  }
+
+  .paints{
+
+    transform: translateX(-60px) translateY(60px)!important;
+  }
+  .binary{
+
+    transform: translateX(-140px) translateY(20px)!important;
+
+  }
+
+
+  .jobTitles{
+    transform: translateX(-17px);
+
+  }
+  .jobTitles1{
+    transform: translateX(4px);
+
+  }
+  .jobTitlesHeading{
+    transform: translateY(-5px);
+    font-size: 25px;
+  }
+  .jobTitlesHeading1{
+    transform: translateY(-5px);
+    font-size: 20px;
+    z-index: 10;
+  }
+
+  .scarface{
+    width: 350px;
+    height: 350px;
+  }
+
+  .title{
+    font-size: 1.3rem !important;
+    margin-left: -50px;
+  }
+  p {
+    width: 300px;
+  }
+
+  h1{
+    font-size: 1.7rem;
+  }
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="first">
+
+
+<nav class="navbar navbar-expand-lg navbar-transparent bg-transparent">
+    <a class="navbar-brand" href="#">
+        <img class="a33" src="33-01.png" width="65" height="65" class="d-inline-block align-top" alt="Logo">
+        <i class="omar">Omar</i><i class="azzam">Azzam</i>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#second">UI/UX</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#third">DEV</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#fourth">DESIGN</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#fifth">Contact Me</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="responsive-container">
+  <h4 class="jobT">Software Engineer - Designer</h4>
+  <h1 class="welcome">WELLCOME</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  sed do eiusmod tempor incididunt ut labore et dolore
+  magna aliqua. Ut enim ad minim veniam, quis nostrud
+  exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in esse voluptate
+  velit esse cillum dolore eu nulla pariatur. </p>
+
+  <button class="contact-button" id="redirect-button">Contact Me</button>
+</div>
+
+
+<!-- <div class="image-button">
+    <a href="#second">
+        <img src="scroll.png" style="width: 100%" alt="Button">
+    </a>
+</div> -->
+
+
+</div>
+
+
+<div class="second" id="second">
+<div class="overlay"></div>
+<br>
+<br>
+
+<div style="width: 50%; height: 55vh;  margin-top: 0vh; padding-top: 0px;">
+  <h4 class="section">Portfolio</h4>
+  <h1 class="title">UI/UX PROOJECTS</h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="rocket" id="rocket">
+    <img class="rocket" src="rocket.gif"  alt="">
+  </div>
+  <div class="box"; id="box">
+    <div class="frame">
+        <img src="oya.png" alt="OYA Application" class="image">
+        <div class="slider">
+            <h5>OYA Application UI </h5>
+            <h6>AdobeXD - Illustrator</h6>
+        </div>
+    </div>
+
+
+  </div>
+  <div class="box1" id="box1">
+    <div class="frame">
+        <img src="hqr.png" alt="OYA Application" class="image">
+        <div class="slider">
+            <h5>HQR WEBSITE</h5>
+            <h6>HTML - CSS - JS</h6>
+        </div>
+  </div>
+  </div>
+  <div class="box2" id="box2">
+    <div class="frame">
+        <img src="avengers.png" alt="OYA Application" class="image">
+        <div class="slider">
+            <h5>Avengers Game</h5>
+            <h6>Java - JavaFX - Illustrator</h6>
+        </div>
+    </div>
+
+  </div>
+
+  <div class="image-button">
+      <a href="#third">
+          <img src="scroll.png" style="width: 100%" alt="Button">
+      </a>
+  </div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+<div class="third" id="third">
+<div class="overlay1"></div>
+<br>
+<br>
+
+<div style="width: 50%; height: 55vh;  margin-top: 0vh; padding-top: 0px;">
+  <h4 class="section">Portfolio</h4>
+  <h1 class="title">WEB DEVELLOPMENT</h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="plane" id="plane">
+    <img class="plane" src="plane.png"  alt="">
+  </div>
+  <div class="box3"; id="box3">
+    <div class="frame">
+        <img src="hqr.png" alt="OYA Application" class="image">
+        <div class="slider">
+            <h5>HQR WEBSITE</h5>
+            <h6>HTML - CSS - JS</h6>
+        </div>
+  </div>
+  </div>
+  <div class="box4" id="box4"></div>
+  <div class="box5" id="box5"></div>
+
+  <div class="image-button">
+      <a href="#fourth">
+          <img src="scroll.png" style="width: 100%" alt="Button">
+      </a>
+  </div>
+
+
+
+</div>
+</div>
+
+<div class="fourth" id="fourth">
+<div class="overlay2"></div>
+<br>
+<br>
+
+<div style="width: 50%; height: 55vh;  margin-top: 0vh; padding-top: 0px;">
+  <h4 class="section">Portfolio</h4>
+  <h1 class="title">DESIGN PROOJECTS</h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!-- <div class="pagination">
+      <button class="btn" style="transform: rotate(-90deg)" id="upBtn">➤</button>
+      <span class="page-count" id="pageCount">1/8</span>
+      <button class="btn" style="transform: rotate(90deg)" id="downBtn">➤</button>
+  </div> -->
+  <div class="bird" id="bird">
+    <img class="bird" src="flyy.gif"  alt="">
+  </div>
+  <div class="box6"; id="box6">
+    <div class="frame" id="frame1">
+         <!-- <img src="vena.png" alt="OYA Application" class="image"> -->
+        <div class="slider">
+            <h5>Vena Branding</h5>
+            <h6>Illustrator - Photoshop</h6>
+        </div>
+  </div>
+  </div>
+  <div class="box7" id="box7">
+    <div class="frame" id="frame2">
+         <!-- <img src="laFamille.png" alt="OYA Application" class="image"> -->
+        <div class="slider">
+            <h5>LaFamille Logos</h5>
+            <h6>Illustrator - Photoshop</h6>
+        </div>
+  </div>
+  </div>
+  <div class="box8" id="box8">
+    <div class="frame">
+        <img src="mun.png" alt="OYA Application" class="image">
+        <div class="slider">
+            <h5>GUCMUN Portfolio Brochure</h5>
+            <h6>Illustrator - Photoshop</h6>
+        </div>
+  </div>
+  </div>
+
+  <div class="image-button">
+      <a href="#fifth">
+          <img src="scroll.png" style="width: 100%" alt="Button">
+      </a>
+  </div>
+
+
+
+</div>
+</div>
+
+<div class="fifth" id="fifth">
+<!-- <div class="overlay"></div> -->
+<br>
+<br>
+
+
+<div class="heading">
+  <h4 class="section1" style="text-align: center;">WHO AM I?</h4>
+  <div class="container">
+    <h1 class="welcome1left" style="text-align: center;">OMAR AZZAM</h1>
+
+  </div>
+
+</div>
+
+<div class="responsivediv">
+
+
+        <div class="left-overlay">
+          <div class="jobTitles">
+          <h4 class="jobTitlesHeading">Designer</h4>
+          <img class="paints" src="paints.png" style="position: absolute;
+          width: 270px; z-index: 0;transform: translateX(-30px) translateY(60px);" alt="">
+        </div>
+      </div>
+        <div class="scarface"></div>
+        <div class="right-overlay">
+          <div class="jobTitles1">
+          <h4 class="jobTitlesHeading1">Software Engineer</h4>
+          <br>
+          <img class="binary"src="binary.png" style="position: absolute;
+          width: 270px; z-index: 0;transform: translateX(-230px) translateY(10px);" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class="contactbar">
+        <div class="image-button1">
+            <a href="https://www.linkedin.com/in/omar-azzam-255a81229/" target="_blank">
+                <img src="1.png" style="width:45px;" alt="Button">
+            </a>
+        </div>
+
+        <div class="image-button1">
+            <a href="https://www.behance.net/omarrazzam" target="_blank">
+                <img src="2.png" style="width:45px;" alt="Button">
+            </a>
+        </div>
+
+        <div class="image-button1">
+          <a href="https://github.com/omarrazzam" target="_blank">
+                <img src="3.png" style="width:45px;" alt="Button">
+            </a>
+        </div>
+
+        <div class="image-button1">
+            <a href="mailto:omarhossam20@gmail.com" target="_blank">
+                <img src="4.png" style="width:45px;" alt="Button">
+            </a>
+        </div>
+
+        <div class="image-button1">
+        <a href="#" target="_blank">
+            <img src="5.png" style="width:45px;" alt="Button" id="copyTextImage">
+            <span class="phone-number" id="phoneText">+201149329633</span>
+        </a>
+    </div>
+      </div>
+      </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Your page content goes here -->
+
+<!-- Link to Bootstrap JS and jQuery (required for Bootstrap components to work) -->
+
+<script>
+    // Smooth scrolling using JavaScript
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+<script>
+const rocket = document.getElementById("rocket");
+const box = document.getElementById("box");
+const secondDiv = document.querySelector(".second");
+const overlay = document.querySelector(".overlay");
+const overlay1 = document.querySelector(".overlay1");
+const overlay2 = document.querySelector(".overlay2");
+
+let overlayVisible = false; // Track the overlay state
+let overlay1Visible = false; // Track the overlay state
+let overlay2Visible = false; // Track the overlay state
+
+let rocketExpanded = false;
+
+rocket.addEventListener("click", () => {
+    box.classList.toggle("expanded0");
+    box1.classList.toggle("expanded1");
+    box2.classList.toggle("expanded2");
+
+    if (rocketExpanded) {
+        rocket.classList.remove("expandedR");
+        rocket.classList.remove("rotatedR");
+        rocket.classList.toggle("originalR");
+        setTimeout(() => {
+            // After the translation is complete, rotate the plane back
+
+            rocket.classList.remove("expandedR");
+            rocket.classList.remove("rotatedR");
+            rocket.classList.toggle("originalR");
+
+
+        }, 1450); // Adjust the delay as needed
+
+    } else {
+        // If it's not expanded, expand it
+        rocket.classList.toggle("expandedR");
+        setTimeout(() => {
+            // After the translation is complete, rotate the plane back
+            rocket.classList.toggle("rotatedR");
+        }, 1450);
+         // Adjust the delay as needed
+        // Remove the rotated class to ensure it starts from the correct state
+
+    }
+
+    // Toggle the overlay and its brightness gradually on rocket click
+    overlayVisible = !overlayVisible;
+
+    if (overlayVisible) {
+        overlay.style.setProperty("--overlay-color", "rgba(0, 0, 0, 0.6)");
+    } else {
+        overlay.style.setProperty("--overlay-color", "rgba(0, 0, 0, 0)");
+    }
+
+    // Update the state of planeExpanded after each click
+    rocketExpanded = !rocketExpanded;
+});
+
+let planeExpanded = false;
+
+plane.addEventListener("click", () => {
+    box3.classList.toggle("expanded3");
+    box4.classList.toggle("expanded4");
+    box5.classList.toggle("expanded5");
+
+    if (planeExpanded) {
+        plane.classList.remove("expanded");
+        plane.classList.remove("rotated");
+        plane.classList.toggle("original");
+        setTimeout(() => {
+            // After the translation is complete, rotate the plane back
+
+            plane.classList.remove("expanded");
+            plane.classList.remove("rotated");
+            plane.classList.toggle("original");
+            plane.classList.remove("rotateback");
+
+        }, 1450); // Adjust the delay as needed
+
+    } else {
+        // If it's not expanded, expand it
+        plane.classList.toggle("expanded");
+        setTimeout(() => {
+            // After the translation is complete, rotate the plane back
+            plane.classList.toggle("rotated");
+        }, 1450);
+         // Adjust the delay as needed
+        // Remove the rotated class to ensure it starts from the correct state
+
+    }
+
+    // Toggle the overlay and its brightness gradually on rocket click
+    overlay1Visible = !overlay1Visible;
+
+    if (overlay1Visible) {
+        overlay1.style.setProperty("--overlay1-color", "rgba(0, 0, 0, 0.6)");
+    } else {
+        overlay1.style.setProperty("--overlay1-color", "rgba(0, 0, 0, 0)");
+    }
+
+    // Update the state of planeExpanded after each click
+    planeExpanded = !planeExpanded;
+});
+
+
+let birdExpanded = false;
+
+bird.addEventListener("click", () => {
+    box6.classList.toggle("expanded6");
+    box7.classList.toggle("expanded7");
+    box8.classList.toggle("expanded8");
+
+    if (birdExpanded) {
+        bird.classList.remove("expandedB");
+        bird.classList.remove("rotatedB");
+        bird.classList.toggle("originalB");
+        setTimeout(() => {
+            // After the translation is complete, rotate the plane back
+
+            bird.classList.remove("expandedB");
+            bird.classList.remove("rotatedB");
+            bird.classList.toggle("originalB");
+
+
+        }, 1450); // Adjust the delay as needed
+
+    } else {
+        // If it's not expanded, expand it
+        bird.classList.toggle("expandedB");
+        setTimeout(() => {
+            // After the translation is complete, rotate the plane back
+            bird.classList.toggle("rotatedB");
+        }, 1450);
+         // Adjust the delay as needed
+        // Remove the rotated class to ensure it starts from the correct state
+
+    }
+
+    // Toggle the overlay and its brightness gradually on rocket click
+    overlay2Visible = !overlay2Visible;
+
+    if (overlay2Visible) {
+        overlay2.style.setProperty("--overlay2-color", "rgba(0, 0, 0, 0.6)");
+    } else {
+        overlay2.style.setProperty("--overlay2-color", "rgba(0, 0, 0, 0)");
+    }
+
+    // Update the state of planeExpanded after each click
+    birdExpanded = !birdExpanded;
+});
+
+document.getElementById("redirect-button").addEventListener("click", function() {
+       const targetElement = document.getElementById("fifth"); // Get the target element
+       if (targetElement) {
+           // Calculate the scroll position to the target element
+           const targetOffset = targetElement.getBoundingClientRect().top + window.scrollY;
+
+           // Smooth scroll animation
+           window.scrollTo({
+               top: targetOffset,
+               behavior: "smooth" // Smooth scrolling behavior
+           });
+       }
+   });
+
+
+   const copyTextImage = document.getElementById("copyTextImage");
+const phoneText = document.getElementById("phoneText");
+
+copyTextImage.addEventListener("click", () => {
+    // Create a textarea element to temporarily hold the text
+    const textArea = document.createElement("textarea");
+    textArea.value = phoneText.textContent;
+
+    // Append the textarea element to the document
+    document.body.appendChild(textArea);
+
+    // Select and copy the text in the textarea
+    textArea.select();
+    document.execCommand("copy");
+
+    // Remove the textarea element
+    document.body.removeChild(textArea);
+
+    // You can add feedback to indicate that the text has been copied
+    alert("Phone number copied to clipboard: " + phoneText.textContent);
+});
+
+const pageCountElement = document.getElementById('pageCount');
+const upBtn = document.getElementById('upBtn');
+const downBtn = document.getElementById('downBtn');
+
+// Initialize page count and total pages
+let currentPage = 1;
+const totalPages = 8;
+
+
+const frameElement = document.getElementById('frame1');
+const frameElement2 = document.getElementById('frame2');
+
+// Function to update the page count text
+function updatePageCount() {
+    pageCountElement.textContent = `${currentPage}/${totalPages}`;
+}
+
+// Event listener for the "Up" button
+downBtn.addEventListener('click', () => {
+    if (currentPage > 1) {
+        currentPage--;
+        updatePageCount();
+    }
+    if (frameElement.id == 'frame1') {
+        frameElement.id = 'frame2';
+    }
+    if (frameElement.id == 'frame2') {
+        frameElement2.id = 'frame1';
+    }
+
+
+
+});
+
+// Event listener for the "Down" button
+upBtn.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+        currentPage++;
+        updatePageCount();
+    }
+});
+
+// Initial page count update
+updatePageCount();
+
+// // Get references to DOM elements
+//
+//        const toggleButton = document.getElementById('toggleButton');
+//
+//        // Event listener for the button click
+//        toggleButton.addEventListener('click', () => {
+//            // Toggle the class name between "box" and "sub"
+//            if (boxElement.idList.contains('box')) {
+//                boxElement.classList.remove('box');
+//                boxElement.classList.add('sub');
+//            } else {
+//                boxElement.classList.remove('sub');
+//                boxElement.classList.add('box');
+//            }
+//        });
+
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

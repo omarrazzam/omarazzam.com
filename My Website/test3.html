@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Centered Divs</title>
+    <style>
+        /* Styling for the outer container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Styling for the original two divs */
+        .original-div {
+            width: 50%; /* Half of the page width */
+            height: 25vh;
+            background-color: #ccc;
+            position: absolute;
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%);
+            left: 0; /* Start from the left edge */
+        }
+
+        /* Styling for the new two divs with higher z-index and opacity */
+        .overlay-div {
+            width: 50%; /* Half of the page width */
+            height: 25vh;
+            background-color: #f0f0f0;
+            position: absolute;
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%);
+            left: 50%; /* Start from the middle */
+            opacity: 0.6; /* 60% opacity */
+            z-index: 1; /* Higher z-index to appear on top */
+        }
+
+        /* Add any content or additional styling here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Original two divs -->
+        <div class="original-div">
+            <!-- Content for the first original div -->
+        </div>
+
+        <!-- New two divs with higher z-index and opacity -->
+        <div class="overlay-div">
+            <!-- Content for the first overlay div -->
+        </div>
+    </div>
+</body>
+</html>
